@@ -2,7 +2,7 @@
 
 C’est un programme qui simule une machine fictive composee d’une memoire et d’un microprocesseur. Elle effectue deux taches : la premiere est un assembleur qui va transformer un programme ecrit en langage assembleur en un langage machine et la deuxieme c’est la simulation qui recupere le programme ecrit en langage machine et l'execute instruction par instruction. 
 
-La description supplementaire sur la machine en soi et les commandes que vous pouvez utilisez se trouve dans le fichier user.pdf attachee, tandis que le fichier dev.pdf vous donnera l'information sur le processus de creation du projet. Vous pouvez egalement retrouver l'enonce complet du projet (sujet.pdf) avec toutes les explications sur le travail qui etait a faire.
+La description supplementaire sur la machine en soi et les commandes que vous pouvez utilisez se trouve dans le fichier user.pdf attachee, tandis que le fichier dev.pdf vous donnera l'information sur le processus de creation du projet. Vous pouvez egalement retrouver l'enonce complet du projet (sujet.pdf) avec toutes les explications sur le travail qui etait a faire. Ces fichiers se trouvent dans le repertoire docs.
 
 ## Compilation et execution du programme 
 
