@@ -4,6 +4,8 @@ C’est un programme qui simule une machine fictive composee d’une memoire et 
 
 La description supplementaire sur la machine en soi et les commandes que vous pouvez utilisez se trouve dans le fichier user.pdf attachee, tandis que le fichier dev.pdf vous donnera l'information sur le processus de creation du projet. Vous pouvez egalement retrouver l'enonce complet du projet (sujet.pdf) avec toutes les explications sur le travail qui etait a faire. Ces fichiers se trouvent dans le repertoire docs.
 
+C'est un projet académique collaboratif réalisé en binôme en 2024.
+
 ## Compilation et execution du programme 
 
 Pour compiler et executer le projet, ouvrez votre terminal et placez-vous dans le repertoire contenant le code source et ensuite executer les deux commandes suivantes : 
