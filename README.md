@@ -1,14 +1,16 @@
-# Simulation d’une machine virtuelle
+# Virtual Machine Simulation
 
-C’est un programme qui simule une machine fictive composee d’une memoire et d’un microprocesseur. Elle effectue deux taches : la premiere est un assembleur qui va transformer un programme ecrit en langage assembleur en un langage machine et la deuxieme c’est la simulation qui recupere le programme ecrit en langage machine et l'execute instruction par instruction. 
+This is a program that simulates a fictional machine composed of a memory and a microprocessor. It performs two tasks: the first is an assembler that converts a program written in assembly language into machine language, and the second is the simulation which takes the machine language program and executes it instruction by instruction.
 
-La description supplementaire sur la machine en soi et les commandes que vous pouvez utilisez se trouve dans le fichier user.pdf attachee, tandis que le fichier dev.pdf vous donnera l'information sur le processus de creation du projet. Vous pouvez egalement retrouver l'enonce complet du projet (sujet.pdf) avec toutes les explications sur le travail qui etait a faire. Ces fichiers se trouvent dans le repertoire docs.
+📁 **Please note**: Descriptive documents for the project are located in the `docs` folder and are written in **French**:
+- `sujet.pdf` – the project instructions provided by the professor,
+- `dev.pdf` – the development report explaining how the project was created,
+- `user.pdf` – a user manual explaining how to use the virtual machine.
+This is a collaborative academic project completed in pairs in 2024.
 
-C'est un projet académique collaboratif réalisé en binôme en 2024.
+## Compilation and Execution of the Program
 
-## Compilation et execution du programme 
-
-Pour compiler et executer le projet, ouvrez votre terminal et placez-vous dans le repertoire contenant le code source et ensuite executer les deux commandes suivantes : 
+To compile and run the project, open your terminal and navigate to the directory containing the source code, then execute the following two commands:
 
 ```bash
 gcc -Wall *.c -o simulateur -lm
@@ -18,17 +20,17 @@ gcc -Wall *.c -o simulateur -lm
 ./simulateur tests/inversion.txt
 ```
 
-## Description du programme dans l'exemple
+## Program Description in the Example
 
-Dans cet exemple, nous commencons par creer un fichier executable nomme "simulateur", puis nous l'exécutons en passant en parametres l'un des fichiers de tests.
+In this example, we first create an executable file named "simulator," then run it by passing one of the test files as a parameter.
 
-Ici le fichier "inversion.txt" contient un simple programme, dont l'algorithme est decrit ci-dessous : 
+Here the file "inversion.txt" contains a simple program, whose algorithm is described below:
 
 ```
 ici: in r1
 ```
 
-D'abord, nous initialisons une etiquette ("ici"), qui sera utilisee pour indiquer au programme l'adresse a laquelle il doit se rendre, puis nous attendons que l'utilisateur saisisse un nombre entier (positif ou negatif) dans un untervalle suivant : [-32768; 32767] qui sera stocke dans le registre 1 (in r1).
+First, we initialize a label ("ici"), which will be used to indicate the address where the program should jump, then we wait for the user to enter an integer (positive or negative) within the following range: [-32768; 32767], which will be stored in register 1 (in r1).
 
 ```
 jzs fin
@@ -36,21 +38,21 @@ sub r1, r0, r1
 out r1
 ```
 
-A la prochaine ligne, nous verifions si l'utilisateur a entre 0 et, dans ce cas, nous arretons le programme en passent a l'adresse indique par l'etiquette "fin" apres quoi l'instruction "hlt" est executee pour arreter le programme. 
+On the next line, we check if the user entered 0 and, if so, we stop the program by jumping to the address indicated by the label "fin", after which the "hlt" instruction is executed to halt the program.
 
 ```
 fin: hlt
 ```
 
-Dans le cas contraire, le programme soustrait le nombre entré par l'utilisateur à 0, et ainsi le registre r1 contient l'oppose du nombre inital. Ensuite, ce nombre obtenu est affiche.
+Otherwise, the program subtracts the entered number from 0, so register r1 contains the opposite of the initial number. Then, this resulting number is output.
 
 ```
 jmp ici
 ```
 
-Finalement, nous sautons a l'adresse indique par l'etiquette "ici" avec un saut inconditionnel (jmp).
+Finally, we jump to the address indicated by the label "ici" with an unconditional jump (jmp).
 
-Le programme en entier :
+The complete program:
 
 ```
 ici: in r1
@@ -61,4 +63,4 @@ ici: in r1
 fin: hlt
 ```
 
-Pour les autres exemples de programme, vous pouvez consulter une description moins detaillee a la fin du fichier dev.pdf.
+For other program examples, you can find a less detailed description at the end of the dev.pdf file.
